@@ -1,6 +1,7 @@
 import React from "react";
 import { User, GraduationCap, Target, Wrench, FileText, ArrowRight } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { assetUrl } from "../lib/assetUrl";
 
 export default function AboutSection() {
   const { language } = useLanguage();
@@ -102,7 +103,7 @@ export default function AboutSection() {
               </a>
               
               <a
-                href="/resume-hayden.pdf"
+                href={assetUrl("/resume-hayden.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-secondary/25 hover:bg-secondary/40 border border-border/60 hover:border-white/20 text-white/90 hover:text-white text-xs md:text-sm font-mono uppercase tracking-widest px-6 py-3.5 rounded-lg transition-all font-semibold cursor-pointer"
@@ -121,7 +122,7 @@ export default function AboutSection() {
               {/* Profile photo */}
               <div className="relative w-[6.4rem] h-[10.4rem] md:w-[7.2rem] md:h-[10.4rem] shrink-0 rounded-xl bg-black/60 border border-primary/20 group-hover:border-primary/40 flex items-center justify-center overflow-hidden transition-colors">
                 <img
-                  src="/self-photo.png"
+                  src={assetUrl("/self-photo.png")}
                   alt={language === "en" ? "Portrait of Hayden" : "谭德海头像"}
                   className="h-full w-full object-cover object-[center_18%] scale-[1.03] grayscale-[18%] contrast-105 saturate-90 transition-transform duration-500 group-hover:scale-[1.07]"
                 />

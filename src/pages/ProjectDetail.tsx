@@ -4,6 +4,7 @@ import { getProjectBySlug } from "../data/projects";
 import { useLanguage } from "../context/LanguageContext";
 import type { Language } from "../context/LanguageContext";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import { assetUrl } from "../lib/assetUrl";
 
 type DetailBlockProps = {
   label: string;
@@ -143,7 +144,7 @@ export default function ProjectDetail() {
           {cover ? (
             <div className="mt-14 bg-secondary/25 border border-border/40 rounded-lg overflow-hidden">
               <img
-                src={cover}
+                src={assetUrl(cover)}
                 alt={title}
                 className="w-full max-h-[720px] object-contain bg-hero-bg"
               />
@@ -187,7 +188,7 @@ export default function ProjectDetail() {
             {caseImages.map((image: string, index: number) => (
               <figure key={image} className="w-full max-w-[1120px] mx-auto">
                 <img
-                  src={image}
+                  src={assetUrl(image)}
                   alt={`${title} ${labels.imageAlt} ${index + 1}`}
                   loading="lazy"
                   className="w-full h-auto object-contain border border-border/30 bg-secondary/20 shadow-2xl"

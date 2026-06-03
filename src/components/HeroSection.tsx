@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import { assetUrl } from "../lib/assetUrl";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 const MOBILE_POINTER_QUERY = "(hover: none), (pointer: coarse)";
@@ -131,7 +132,7 @@ export default function HeroSection() {
             {t.viewProjects}
           </a>
           <a
-            href="/resume-hayden.pdf"
+            href={assetUrl("/resume-hayden.pdf")}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-background px-6 py-3 md:px-8 md:py-4 text-sm font-bold rounded-sm cursor-pointer hover:brightness-90 active:scale-[0.97] transition-all pointer-events-auto uppercase tracking-wider text-center"

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Mail, MapPin, Target, Send, Download, Copy, Check } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { assetUrl } from "../lib/assetUrl";
 
 export default function ContactSection() {
   const { language } = useLanguage();
@@ -109,7 +110,7 @@ export default function ContactSection() {
               </a>
               
               <a
-                href="/resume-hayden.pdf"
+                href={assetUrl("/resume-hayden.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-secondary/15 hover:bg-secondary/35 border border-border/60 hover:border-white/20 text-white text-xs md:text-sm font-mono uppercase tracking-widest px-6 py-3.5 rounded-lg transition-all font-semibold cursor-pointer text-center"

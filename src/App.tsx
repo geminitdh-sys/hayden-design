@@ -13,11 +13,12 @@ import ContactSection from "./components/ContactSection";
 import { LanguageProvider } from "./context/LanguageContext";
 import ProjectDetail from "./pages/ProjectDetail";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { routerBasename } from "./lib/assetUrl";
 
 export default function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={routerBasename()}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />

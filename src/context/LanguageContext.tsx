@@ -8,20 +8,15 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-const LANGUAGE_STORAGE_KEY = "hayden-design-language";
-
 function getInitialLanguage(): Language {
-  if (typeof window === "undefined") return "en";
-
-  const savedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
-  return savedLanguage === "zh" || savedLanguage === "en" ? savedLanguage : "en";
+  return "zh";
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>(getInitialLanguage);
 
   useEffect(() => {
-    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+    window.localStorage.removeItem("hayden-design-language");
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
   }, [language]);
 

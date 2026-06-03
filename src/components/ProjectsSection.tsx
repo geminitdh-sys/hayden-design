@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import { useLanguage } from "../context/LanguageContext";
+import { assetUrl } from "../lib/assetUrl";
 
 export default function ProjectsSection() {
   const { language } = useLanguage();
@@ -70,7 +71,7 @@ export default function ProjectsSection() {
                 <div className="relative w-full h-48 md:h-64 rounded-sm bg-hero-bg overflow-hidden border border-border/30 mb-8 flex items-center justify-center">
                   {project.cover ? (
                     <img
-                      src={project.cover}
+                      src={assetUrl(project.cover)}
                       alt={language === "en" ? project.titleEn : project.titleZh}
                       className={`w-full h-full ${
                         ["conning-display", "yunchang"].includes(project.slug)
