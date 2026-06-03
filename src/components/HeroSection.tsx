@@ -1,10 +1,25 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
+const MOBILE_POINTER_QUERY = "(hover: none), (pointer: coarse)";
 
 export default function HeroSection() {
   const { language } = useLanguage();
+  const [isMobilePointer, setIsMobilePointer] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(MOBILE_POINTER_QUERY);
+    const updateMobilePointer = () => setIsMobilePointer(mediaQuery.matches);
+
+    updateMobilePointer();
+    mediaQuery.addEventListener("change", updateMobilePointer);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateMobilePointer);
+    };
+  }, []);
+
   const preservePageScroll = (event: React.WheelEvent<HTMLElement>) => {
     event.stopPropagation();
   };
@@ -54,11 +69,14 @@ export default function HeroSection() {
       </svg>
 
       {/* Spline 3D Background */}
-      <div className="absolute inset-0 w-full h-full z-0" style={{ filter: "hue-rotate(259deg) saturate(1.8) contrast(1.05) url(#hero-blue-shift)" }}>
+      <div
+        className={`absolute inset-0 w-full h-full z-0 hero-spline-background ${isMobilePointer ? "hero-spline-background-mobile pointer-events-none" : ""}`}
+        style={{ filter: "hue-rotate(259deg) saturate(1.8) contrast(1.05) url(#hero-blue-shift)" }}
+      >
         <Suspense fallback={<div className="absolute inset-0 bg-hero-bg animate-pulse" />}>
           <Spline
             scene="https://prod.spline.design/Slk6b8kz3LRlKiyk/scene.splinecode"
-            className="w-full h-full"
+            className={`w-full h-full ${isMobilePointer ? "pointer-events-none" : ""}`}
           />
         </Suspense>
       </div>

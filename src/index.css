@@ -80,3 +80,38 @@
     -moz-osx-font-smoothing: grayscale;
   }
 }
+
+@keyframes hero-mobile-drift {
+  0% {
+    transform: translate3d(-1.5%, -1%, 0) scale(1.05) rotate(-0.2deg);
+  }
+  23% {
+    transform: translate3d(1.2%, -2.2%, 0) scale(1.065) rotate(0.15deg);
+  }
+  47% {
+    transform: translate3d(2%, 1.1%, 0) scale(1.055) rotate(0.28deg);
+  }
+  71% {
+    transform: translate3d(-0.8%, 2%, 0) scale(1.07) rotate(-0.12deg);
+  }
+  100% {
+    transform: translate3d(-2%, 0.6%, 0) scale(1.06) rotate(0.18deg);
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .hero-spline-background,
+  .hero-spline-background-mobile {
+    pointer-events: none;
+    touch-action: pan-y;
+    transform-origin: center;
+    animation: hero-mobile-drift 18s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  .hero-spline-background canvas,
+  .hero-spline-background-mobile canvas {
+    pointer-events: none !important;
+    touch-action: pan-y;
+  }
+}
