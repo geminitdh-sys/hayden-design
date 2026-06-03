@@ -11,19 +11,32 @@ import MethodSection from "./components/MethodSection";
 import AboutSection from "./components/AboutSection";
 import ContactSection from "./components/ContactSection";
 import { LanguageProvider } from "./context/LanguageContext";
+import ProjectDetail from "./pages/ProjectDetail";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
   return (
     <LanguageProvider>
-      <div id="sentinel-landing-wrapper" className="bg-hero-bg min-h-screen relative font-sora selection:bg-primary/30 selection:text-white">
-        <Navbar />
-        <HeroSection />
-        <ProjectsSection />
-        <CapabilitiesSection />
-        <MethodSection />
-        <AboutSection />
-        <ContactSection />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
+        </Routes>
+      </BrowserRouter>
     </LanguageProvider>
+  );
+}
+
+function HomePage() {
+  return (
+    <div id="sentinel-landing-wrapper" className="bg-hero-bg min-h-screen relative font-sora selection:bg-primary/30 selection:text-white">
+      <Navbar />
+      <HeroSection />
+      <ProjectsSection />
+      <CapabilitiesSection />
+      <MethodSection />
+      <AboutSection />
+      <ContactSection />
+    </div>
   );
 }

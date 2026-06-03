@@ -5,19 +5,28 @@ const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
 export default function HeroSection() {
   const { language } = useLanguage();
+  const preservePageScroll = (event: React.WheelEvent<HTMLElement>) => {
+    event.stopPropagation();
+  };
 
   const content = {
     en: {
+      heading: "HAYDEN",
+      headingAccent: "DESIGN",
       tagline: "Industrial Design · HMI · AI-assisted Design",
-      subheading: "I design intelligent products and interfaces through human factors, visual attention, and system-level thinking.",
+      intro: "I am Hayden Tan",
+      subheading: "I design human-centered products and interfaces through research, systems thinking, and visual storytelling.",
       viewProjects: "View Projects",
       downloadResume: "Download Resume",
       footerNote: "Selected works in industrial design, maritime HMI, AI-assisted UI, and product visualization."
     },
     zh: {
+      heading: "Tan Dehai",
+      headingAccent: "DESIGN",
       tagline: "工业设计 · 人机交互 (HMI) · AI辅助设计",
-      subheading: "我结合人因工程、人眼视觉注意力和系统化思维，为精细化决策场景设计智能产品形态与高效率交互界面。",
-      viewProjects: "查看精选项目",
+      intro: "我是谭德海",
+      subheading: "关注工业产品、智能界面与人因体验之间的关系，并通过研究驱动的方式构建设计方案。",
+      viewProjects: "查看相关项目",
       downloadResume: "下载设计简历",
       footerNote: "涵盖工业硬件设计、船舶人机交互(HMI)、AI辅助UI设计及高保真产品视觉化作品。"
     }
@@ -26,9 +35,26 @@ export default function HeroSection() {
   const t = language === "en" ? content.en : content.zh;
 
   return (
-    <section className="relative min-h-screen flex items-end bg-hero-bg overflow-hidden">
+    <section
+      className="relative min-h-screen flex items-end bg-hero-bg overflow-hidden"
+      onWheelCapture={preservePageScroll}
+    >
+      <svg width="0" height="0" aria-hidden="true" focusable="false" className="absolute">
+        <filter id="hero-blue-shift" colorInterpolationFilters="sRGB">
+          <feColorMatrix
+            type="matrix"
+            values="
+              1    0    0    0 0
+              0    .72  0    0 0
+              0    .48  1.08 0 0
+              0    0    0    1 0
+            "
+          />
+        </filter>
+      </svg>
+
       {/* Spline 3D Background */}
-      <div className="absolute inset-0 w-full h-full z-0" style={{ filter: "hue-rotate(259deg) saturate(1.8) contrast(1.05)" }}>
+      <div className="absolute inset-0 w-full h-full z-0" style={{ filter: "hue-rotate(259deg) saturate(1.8) contrast(1.05) url(#hero-blue-shift)" }}>
         <Suspense fallback={<div className="absolute inset-0 bg-hero-bg animate-pulse" />}>
           <Spline
             scene="https://prod.spline.design/Slk6b8kz3LRlKiyk/scene.splinecode"
@@ -45,10 +71,10 @@ export default function HeroSection() {
         
         {/* Heading */}
         <h1
-          className="text-[clamp(3rem,8vw,6rem)] font-bold leading-[1.05] tracking-[-0.05em] text-foreground mb-1 uppercase opacity-0 animate-fade-up"
+          className="text-[clamp(3rem,8vw,6rem)] font-bold leading-[1.05] tracking-[-0.05em] text-foreground mb-1 opacity-0 animate-fade-up"
           style={{ animationDelay: "0.2s" }}
         >
-          HAYDEN <span className="text-primary font-bold">DESIGN</span>
+          {t.heading} <span className="text-primary font-bold">{t.headingAccent}</span>
         </h1>
 
         {/* Industrial Design · HMI · AI-assisted Design Label */}
@@ -57,6 +83,14 @@ export default function HeroSection() {
           style={{ animationDelay: "0.3s" }}
         >
           {t.tagline}
+        </p>
+
+        {/* Intro */}
+        <p
+          className="text-foreground/90 text-[clamp(1.125rem,2.2vw,1.75rem)] font-normal leading-relaxed mb-2 opacity-0 animate-fade-up"
+          style={{ animationDelay: "0.4s" }}
+        >
+          {t.intro}
         </p>
 
         {/* Subheading */}
@@ -79,10 +113,12 @@ export default function HeroSection() {
             {t.viewProjects}
           </a>
           <a
-            href="#contact"
+            href="/resume-hayden.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-white text-background px-6 py-3 md:px-8 md:py-4 text-sm font-bold rounded-sm cursor-pointer hover:brightness-90 active:scale-[0.97] transition-all pointer-events-auto uppercase tracking-wider text-center"
           >
-            {t.downloadResume}
+            {language === "en" ? "Download Resume" : "下载简历"}
           </a>
         </div>
 

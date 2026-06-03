@@ -1,19 +1,20 @@
 import { useLanguage } from "../context/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
-  const { language, setLanguage } = useLanguage();
+  const { language } = useLanguage();
 
   const navLinks = [
     { nameEn: "Projects", nameZh: "项目", slugEn: "Projects" },
-    { nameEn: "Research", nameZh: "研究", slugEn: "Research" },
-    { nameEn: "Method", nameZh: "方法", slugEn: "Method" },
+    { nameEn: "Capabilities", nameZh: "能力", slugEn: "Capabilities" },
+    { nameEn: "Process", nameZh: "流程", slugEn: "Process" },
     { nameEn: "About", nameZh: "关于", slugEn: "About" },
     { nameEn: "Contact", nameZh: "联系", slugEn: "Contact" },
   ];
 
   const getSlug = (slugEn: string) => {
-    if (slugEn === "Research") return "#capabilities";
-    if (slugEn === "Method") return "#method";
+    if (slugEn === "Capabilities") return "#capabilities";
+    if (slugEn === "Process") return "#method";
     return `#${slugEn.toLowerCase().replace(/\s+/g, "-")}`;
   };
 
@@ -44,30 +45,8 @@ export default function Navbar() {
         {/* Separator line on desktop */}
         <span className="hidden md:inline h-4 w-px bg-border/40" />
 
-        {/* Right: Language switch switcher */}
-        <div className="flex items-center gap-2 font-mono text-[11px] tracking-widest select-none">
-          <button
-            onClick={() => setLanguage("en")}
-            className={`transition-all duration-200 cursor-pointer uppercase ${
-              language === "en"
-                ? "text-primary font-bold scale-105"
-                : "text-muted-foreground/50 hover:text-foreground font-normal"
-            }`}
-          >
-            EN
-          </button>
-          <span className="text-muted-foreground/30 font-light">&middot;</span>
-          <button
-            onClick={() => setLanguage("zh")}
-            className={`transition-all duration-200 cursor-pointer ${
-              language === "zh"
-                ? "text-primary font-bold scale-105"
-                : "text-muted-foreground/50 hover:text-foreground font-normal"
-            }`}
-          >
-            中
-          </button>
-        </div>
+        {/* Right: Language switcher */}
+        <LanguageSwitcher />
       </div>
     </nav>
   );

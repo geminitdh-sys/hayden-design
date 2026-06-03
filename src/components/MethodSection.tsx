@@ -15,57 +15,57 @@ interface Phase {
 const phases: Phase[] = [
   {
     number: "01",
-    titleEn: "Problem Deconstruction",
-    titleZh: "设计问题痛点精密解构",
-    descriptionEn: "Breaking down ambiguous design challenges into users, contexts, tasks, constraints, and evaluation criteria.",
-    descriptionZh: "将模糊复杂的软硬件设计命题，抽丝剥茧拆解为具体的用户群画像、工作环境工况、核心任务序列、物理边界局限以及精准可量化的易用性指标。",
-    keywordsEn: ["Context", "User", "Task", "Constraint"],
-    keywordsZh: ["使用工况", "特征人群", "核心任务", "边界局限"],
+    titleEn: "Design Problem Framing",
+    titleZh: "设计问题拆解",
+    descriptionEn: "I break down ambiguous design requirements into concrete use scenarios, target users, core tasks, environmental constraints, and evaluation criteria to clarify the real problem the design needs to solve.",
+    descriptionZh: "将模糊的设计需求拆解为具体的使用场景、目标用户、核心任务、环境限制与评价指标，明确设计真正需要解决的问题。",
+    keywordsEn: ["Use Scenarios", "User Tasks", "Design Constraints", "Evaluation Criteria"],
+    keywordsZh: ["使用场景", "用户任务", "设计约束", "评价指标"],
   },
   {
     number: "02",
-    titleEn: "Cross-domain Analogy",
-    titleZh: "跨领域深度心智类比",
-    descriptionEn: "Mapping structural similarities across domains to generate deeper design insights beyond surface-level references.",
-    descriptionZh: "打破行业孤岛，将高空驾驶、精密医疗和深海操纵等极致安全或高效领域的交互精髓，映射至数字智能触端，挖掘超越表象的原生跨界启示。",
-    keywordsEn: ["Analogy", "Transfer", "Pattern", "Insight"],
-    keywordsZh: ["跨界类比", "经验转译", "心智模型", "纵深洞察"],
+    titleEn: "Cross-Domain Case Referencing",
+    titleZh: "跨领域案例借鉴",
+    descriptionEn: "I look for references from adjacent industries and mature cases, such as automotive HMI, medical devices, industrial control systems, consumer electronics, and app UI, then transfer relevant interaction logic and visual organization methods into the current project.",
+    descriptionZh: "从相近行业与成熟案例中寻找参考，例如汽车 HMI、医疗设备、工业控制台、消费电子与 App UI，将可迁移的交互逻辑和视觉组织方式用于当前项目。",
+    keywordsEn: ["Case Study", "Benchmarking", "Design Transfer", "Interaction Reference"],
+    keywordsZh: ["案例研究", "行业对标", "设计迁移", "交互参考"],
   },
   {
     number: "03",
-    titleEn: "System Modeling",
-    titleZh: "系统关系与变量建模",
-    descriptionEn: "Building relational models between design variables, user behavior, interface structure, and measurable outcomes.",
-    descriptionZh: "在客观设计因子（如视距离、操作间距、字号视觉权重）、人因交互反馈和主观任务感知之间，构建严谨的逻辑关系网，杜绝凭空臆造设计决策。",
-    keywordsEn: ["Variables", "Relationships", "Metrics", "System"],
-    keywordsZh: ["关键变量", "多维关系", "评估指标", "系统集成"],
+    titleEn: "Translating Human Factors Needs into Design Variables",
+    titleZh: "人因需求转化为设计变量",
+    descriptionEn: "I translate human factors needs such as visual attention, task load, operating distance, and information priority into adjustable design variables, including layout regions, component scale, visual encoding, information hierarchy, and spacing density, to guide HMI and UI iterations.",
+    descriptionZh: "将视觉注意力、任务负荷、操作距离、信息优先级等人因需求，转化为布局区域、组件尺度、视觉编码、信息层级与间距密度等可调整的设计变量，用于指导 HMI 与 UI 方案迭代。",
+    keywordsEn: ["Visual Attention", "Task Load", "Design Variables", "Parameter Space"],
+    keywordsZh: ["视觉注意力", "任务负荷", "设计变量", "参数空间"],
   },
   {
     number: "04",
-    titleEn: "Abstraction-level Switching",
-    titleZh: "多维度信息层级俯瞰",
-    descriptionEn: "Moving between high-level strategy, mid-level information architecture, and low-level visual or interaction details.",
-    descriptionZh: "确保设计视角的无缝穿梭：上一秒从商业模型俯视宏观架构，中观穿过严密的信息矩阵，下一秒立刻扎入对微至1像素投影与微动效的终极审视。",
-    keywordsEn: ["Strategy", "Structure", "Detail", "Iteration"],
-    keywordsZh: ["顶层战略", "中观结构", "像素微观", "纵深迭跃"],
+    titleEn: "System Structure & Information Hierarchy",
+    titleZh: "系统结构与信息层级梳理",
+    descriptionEn: "In complex HMI or UI systems, I organize module relationships, information priority, and user operation paths, ensuring that the design does not only improve local visual appearance but also supports readability, decision efficiency, and continuity of use.",
+    descriptionZh: "在复杂 HMI 或 UI 系统中梳理模块关系、信息优先级与用户操作路径，避免只优化局部视觉效果，而忽略整体系统的可读性、判断效率与使用连续性。",
+    keywordsEn: ["Module Relationships", "Information Hierarchy", "Operation Paths", "System Structure"],
+    keywordsZh: ["模块关系", "信息层级", "操作路径", "系统结构"],
   },
   {
     number: "05",
-    titleEn: "Taste Filtering",
-    titleZh: "主观品味与美德过滤",
-    descriptionEn: "Using visual judgment, semantic consistency, and design intent to filter AI-generated or exploratory outputs.",
-    descriptionZh: "海量生成时代更需要品味来定音。基于深厚的极简现代主义沉淀与高对比度控制力，严格过滤冗余噪点，确保形态传递克制、专业且富含意图性。",
-    keywordsEn: ["Judgment", "Coherence", "Style", "Intent"],
-    keywordsZh: ["视觉审视", "语意对齐", "克制美学", "设计纯度"],
+    titleEn: "Case References & Professional Judgment",
+    titleZh: "案例参考与专业判断",
+    descriptionEn: "Based on mature references, I combine use context, industry standards, brand character, and aesthetic judgment to select a suitable design language for the project, rather than directly copying visual forms.",
+    descriptionZh: "在参考成熟案例的基础上，结合使用场景、行业规范、品牌气质与审美判断，筛选适合当前项目的设计语言，而不是直接照搬视觉形式。",
+    keywordsEn: ["Case References", "Industry Standards", "Design Language", "Aesthetic Judgment"],
+    keywordsZh: ["案例参考", "行业规范", "设计语言", "审美判断"],
   },
   {
     number: "06",
-    titleEn: "AI Amplification",
-    titleZh: "AI原生赋能全流程提速",
-    descriptionEn: "Using AI tools to accelerate documentation, coding, prototyping, variation generation, and design iteration.",
-    descriptionZh: "将智能对话与前沿编译工具深度植入设计师的工作流，敏捷推进原型开发、前端渲染、代码编写与成果物料交付，将纯思辨升华为工程落地。",
-    keywordsEn: ["AI", "Codex", "Prototype", "Production"],
-    keywordsZh: ["前沿共创", "Codex赋能", "高保真原型", "敏捷上市"],
+    titleEn: "AI-Assisted Prototyping & Implementation",
+    titleZh: "AI 辅助原型与实现",
+    descriptionEn: "Using tools such as Codex, Figma, UE5, Python, and React / Vite, I turn design ideas into UI prototypes, interaction components, simulation scenes, data analysis outputs, and front-end pages more efficiently, improving the speed of iteration and implementation.",
+    descriptionZh: "使用 Codex、Figma、UE5、Python 与 React / Vite 等工具，将设计思路快速转化为 UI 原型、交互组件、仿真场景、数据分析结果与前端页面，提高方案迭代和落地效率。",
+    keywordsEn: ["Codex", "Figma", "UE5", "Python", "React / Vite"],
+    keywordsZh: ["Codex", "Figma", "UE5", "Python", "React / Vite"],
   },
 ];
 
@@ -74,26 +74,26 @@ export default function MethodSection() {
 
   const labels = {
     en: {
-      badge: "strategic framework",
-      titlePart1: "Research-driven,",
-      titlePart2: "AI-Amplified",
-      titlePart3: "Design Process",
-      desc: "My design process connects research, systems thinking, visual judgment, and AI-assisted production. It is built to move from ambiguous problems to structured models, then from models to concrete design decisions and deliverable outputs.",
-      inLabel: "INPUT: AMBIGUOUS PROBLEM",
-      strucLabel: "STRUCTURE: RESEARCH + SYSTEM THINKING",
-      midLabel: "HUMAN JUDGMENT + AI AMPLIFICATION",
-      outLabel: "OUTPUT: DESIGN DECISION + DELIVERABLE"
+      badge: "Design Process Framework",
+      titlePart1: "From Problem Framing",
+      titlePart2: "to Design Implementation",
+      titlePart3: "",
+      desc: "I usually begin by breaking down design problems into specific use scenarios, user tasks, environmental constraints, and evaluation criteria. I then combine human factors research, case references, design-variable modeling, and AI-assisted tools to support iterative design development. This process is mainly applied to complex HMI, UI/UX, industrial interface, and interaction prototype design.",
+      inLabel: "Input: Ambiguous Needs / Use Scenarios / User Tasks",
+      strucLabel: "Analysis: Human Factors Research / Case References / Design Variables",
+      midLabel: "Judgment: Information Hierarchy / Usability / Aesthetic Evaluation",
+      outLabel: "Output: Interface Solutions / Interaction Prototypes / Front-End Implementation / Presentation Materials"
     },
     zh: {
-      badge: "科学推进框架",
-      titlePart1: "实证研究驱动，",
-      titlePart2: "AI赋能倍增的",
-      titlePart3: "前沿设计范式",
-      desc: "我将客观、量化的人因研究方法与系统化宏观框架融合，配以设计师的敏锐审美，辅以AI全流程高维提速。旨在推动复杂不确定课题由模糊转为精密系统模型，最终交付极具美学张力、体验可度量的实体产品及软硬件交互视窗。",
-      inLabel: "输入端：模糊杂乱的问题痛点",
-      strucLabel: "结构化：客观人因研究与系统思考",
-      midLabel: "品质精滤：审美注意判定与AI敏捷伴侣",
-      outLabel: "输出端：高确定性设计决策与生产级物料"
+      badge: "设计流程框架",
+      titlePart1: "从问题拆解到",
+      titlePart2: "设计实现的流程",
+      titlePart3: "",
+      desc: "我习惯先把设计问题拆解为具体的使用场景、用户任务、环境限制与评价指标，再结合人因研究、案例参考、设计变量建模与 AI 工具推进方案迭代。这个流程主要服务于复杂 HMI、UI/UX、工业产品界面与交互原型设计。",
+      inLabel: "输入端：模糊需求 / 使用场景 / 用户任务",
+      strucLabel: "分析端：人因研究 / 案例参考 / 设计变量",
+      midLabel: "判断端：信息层级 / 可用性 / 审美判断",
+      outLabel: "输出端：界面方案 / 交互原型 / 前端实现 / 展示物料"
     }
   };
 
@@ -116,8 +116,13 @@ export default function MethodSection() {
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6 uppercase leading-[1.1]">
               {t.titlePart1} <br />
-              <span className="text-primary font-bold">{t.titlePart2}</span> <br />
-              {t.titlePart3}
+              <span className="text-primary font-bold">{t.titlePart2}</span>
+              {t.titlePart3 && (
+                <>
+                  <br />
+                  {t.titlePart3}
+                </>
+              )}
             </h2>
             
             <p className="text-muted-foreground text-sm lg:text-base font-light mb-8 leading-relaxed">

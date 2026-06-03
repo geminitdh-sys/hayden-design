@@ -18,45 +18,45 @@ const capabilities: Capability[] = [
   {
     id: "cap-01",
     number: "01",
-    titleEn: "Industrial Design",
-    titleZh: "工业产品与形体设计",
-    descriptionEn: "Product form development, scenario-based design, CMF exploration, and product visualization for intelligent devices and physical interfaces.",
-    descriptionZh: "结合严谨的人本尺度、形态美学、CMF (色彩、材质与工艺) 规则和精细三维物理渲染，定义下一代智能硬件与实体交互载体的本源形态。",
-    keywordsEn: ["Product Form", "CMF", "Scenario", "Visualization"],
-    keywordsZh: ["产品形态", "色彩工艺", "真机工况", "高拟真视觉"],
+    titleEn: "Industrial Product & Hardware Form Design",
+    titleZh: "工业产品与硬件形态设计",
+    descriptionEn: "I focus on product function, structure, installation context, and human interaction in real-use environments, developing hardware design work from external form and structural expression to 3D modeling and rendered presentation.",
+    descriptionZh: "关注产品在真实使用环境中的功能、结构、安装方式与人机操作关系，完成从外观形态、结构表达到三维建模与渲染展示的硬件设计工作。",
+    keywordsEn: ["Rhino", "UE5", "Structural Expression", "CMF", "Scenario Rendering"],
+    keywordsZh: ["Rhino", "UE5", "结构表达", "CMF", "场景化渲染"],
     icon: PenTool,
   },
   {
     id: "cap-02",
     number: "02",
-    titleEn: "HMI / Interface Design",
-    titleZh: "高决策HMI与复杂界面系统",
-    descriptionEn: "Interface layout, information hierarchy, dashboard systems, maritime HMI, and interaction logic for complex decision-making contexts.",
-    descriptionZh: "专攻大型载具、精密指控中心和高决策负荷终端的超大仪表界面，重组多维空间数据，提供高实时性、高对比度的布局方案。",
-    keywordsEn: ["HMI", "Information Hierarchy", "Dashboard", "Interaction Logic"],
-    keywordsZh: ["人机界面", "高精信息层级", "数字仪表系统", "视效决策反馈"],
+    titleEn: "Complex HMI & Interface System Design",
+    titleZh: "复杂 HMI 与界面系统设计",
+    descriptionEn: "For high-information-density scenarios such as maritime navigation and industrial monitoring, I organize task flows, information hierarchy, and interface module relationships to build complex HMI design solutions guided by visual attention management.",
+    descriptionZh: "面向航海驾驶、工业监控等高信息密度场景，梳理任务流程、信息层级与界面模块关系，构建基于视觉注意力管控的复杂 HMI 界面设计方案。",
+    keywordsEn: ["Information Architecture", "Task Scenarios", "Interface Layout", "Conning Display", "Figma"],
+    keywordsZh: ["信息架构", "任务场景", "界面布局", "Conning Display", "Figma"],
     icon: Layout,
   },
   {
     id: "cap-03",
     number: "03",
-    titleEn: "Research & Evaluation",
-    titleZh: "定量人因研究与眼动验证",
-    descriptionEn: "Eye-tracking experiments, task analysis, AOI definition, visual attention metrics, and evidence-based design evaluation.",
-    descriptionZh: "主张证据支撑的研究。通过红外高速眼动捕捉、AOI 视觉焦点分配模型与操作路径时间测定，在主观设计之余提供可靠的数据回溯机制。",
-    keywordsEn: ["Eye-tracking", "AOI", "Task Analysis", "Attention Metrics"],
-    keywordsZh: ["眼动追踪生理学", "感官焦点锁定", "复杂路径分析", "实证数据评估"],
+    titleEn: "Human Factors Research & Eye-Tracking Data Analysis",
+    titleZh: "人因研究与眼动数据分析",
+    descriptionEn: "Using Tobii Pro Lab, I conduct eye-tracking experiment design, AOI definition, and metric export, analyzing fixation duration, fixation count, and task performance across different interface layouts to quantify visual attention distribution and support design evaluation.",
+    descriptionZh: "基于 Tobii Pro Lab 进行眼动实验设计、AOI 划分与指标导出，分析不同界面布局下的注视时间、注视次数与任务表现，用数据量化视觉注意力分布并支持设计评价。",
+    keywordsEn: ["Tobii Pro Lab", "AOI Analysis", "Fixation Metrics", "Task Performance", "Python"],
+    keywordsZh: ["Tobii Pro Lab", "AOI Analysis", "Fixation Metrics", "Task Performance", "Python"],
     icon: Eye,
   },
   {
     id: "cap-04",
     number: "04",
-    titleEn: "AI-assisted Workflow",
-    titleZh: "AI增幅与全链路敏捷交付",
-    descriptionEn: "Using Codex, Figma, structured documentation, and AI tools to support design exploration, prototyping, iteration, and portfolio production.",
-    descriptionZh: "引入智能编辑器与大生命周期模型，重构经典设计工程化链路。实现从纸面研究至自适应多端页面、前端交互组件的爆发式生成。",
-    keywordsEn: ["Codex", "Figma", "Documentation", "Iteration"],
-    keywordsZh: ["智能编程", "智能设计系统", "结构化文档", "爆发式迭代"],
+    titleEn: "AI-Assisted Design & Prototype Implementation",
+    titleZh: "AI 辅助设计与原型实现",
+    descriptionEn: "I use Codex and AI tools to support product concept breakdown, page structure planning, UI prototype generation, and front-end implementation, improving the iteration efficiency from initial ideas to presentable design outcomes.",
+    descriptionZh: "使用 Codex 与 AI 工具辅助完成产品概念拆解、页面结构规划、UI 原型生成与前端页面实现，提高从想法到可展示作品的迭代效率。",
+    keywordsEn: ["Codex", "Vibe Coding", "React / Vite", "Figma", "UI Prototype"],
+    keywordsZh: ["Codex", "Vibe Coding", "React / Vite", "Figma", "UI Prototype"],
     icon: Cpu,
   },
 ];
@@ -66,14 +66,14 @@ export default function CapabilitiesSection() {
 
   const labels = {
     en: {
-      badge: "Expertise Blueprint",
-      title: "Capabilities",
-      subtitle: "A cross-disciplinary skill set connecting product form, interface systems, research validation, and AI-assisted design production."
+      badge: "Capability Overview",
+      title: "Core Capabilities",
+      subtitle: "Centered on product form, human factors research, complex HMI interfaces, and AI-assisted prototyping, my practice combines eye-tracking analysis, 3D modeling, parametric design, and front-end implementation to support the full process from research to design iteration."
     },
     zh: {
-      badge: "核心专业领地",
+      badge: "能力概览",
       title: "核心能力",
-      subtitle: "贯穿工业硬件形态、高负荷人机仪表网、高精度生理心理学检测、以及前沿智能化代码生成的全链路跨界设计矩阵。"
+      subtitle: "围绕产品形态、人因研究、复杂 HMI 界面与 AI 辅助原型构建，结合眼动分析、三维建模、参数化设计与前端实现，推进从研究到设计迭代的完整流程。"
     }
   };
 

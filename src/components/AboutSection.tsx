@@ -7,56 +7,52 @@ export default function AboutSection() {
 
   const labels = {
     en: {
-      badge: "BIOGRAPHY & BACKGROUND",
+      badge: "Profile & Academic Background",
       title: "ABOUT HAYDEN",
-      tagline: "Industrial Design Graduate Student exploring product design, HMI, and AI-assisted design workflows.",
-      p1: "I am Hayden, an Industrial Design Graduate Student from Singapore. My background combines mechatronics engineering and industrial design, allowing me to approach design from both technical systems and human-centered experience.",
-      p2: "I received my undergraduate education in Mechatronics at Singapore Institute of Technology, and I am currently pursuing a master’s degree in Industrial Design at Ocean University of China. My current work focuses on industrial design, HMI, UI/UX, visual attention research, and AI-assisted design workflows.",
-      p3: "I approach design as a process of deconstructing complex problems, building system-level models, and translating research insights into visual, interactive, and product-level decisions.",
-      more: "More About Me",
-      download: "Download Resume",
+      tagline: "From mechatronics engineering to industrial design, I explore how technical systems interact with human perception, operation, and experience.",
+      p1: "I am Hayden. My undergraduate background in mechatronics engineering trained me to understand structure, control, sensing, and system implementation. Over time, I realized that technical products should not only function correctly, but also be understandable, operable, and usable in real contexts.",
+      p2: "This led me to shift toward industrial design during my graduate studies at Ocean University of China. My current focus includes maritime HMI, visual attention, human factors, and interface design for intelligent equipment. I am especially interested in how people perceive information, make decisions, and complete tasks within complex systems.",
+      p3: "In my design process, I combine engineering thinking, task analysis, eye-tracking experiments, interface layout research, and tools such as UE5, Python, Figma, and Codex. I aim to translate human factors needs into concrete design variables and move projects from research analysis toward prototypes and presentable outcomes.",
+      more: "Explore More About Me",
+      download: "Download Design Resume",
       role: "Industrial Design Graduate Student",
-      subTitle: "Singapore · Industrial Design / HMI / UIUX",
-      regIndex: "Graduate ID Index",
+      subTitle: "Industrial Design / HMI / UIUX",
+      regIndex: "Academic Background Index",
       profile: "Profile",
       pName: "Name",
       pIdent: "Identity",
-      pNation: "Nationality",
-      pNationVal: "Singaporean",
-      edu: "Education Pathway",
-      edu1Title: "B.Eng / Undergraduate",
-      edu1Desc: "Mechatronics, Singapore Institute of Technology",
-      edu2Title: "Master of Industrial Design",
-      edu2Desc: "Industrial Design, Ocean University of China",
+      edu: "Educational Background",
+      edu1Title: "Bachelor of Engineering",
+      edu1Desc: "Mechatronic Engineering, Chongqing Technology and Business University",
+      edu2Title: "Master of Engineering",
+      edu2Desc: "Industrial Design Engineering, Ocean University of China",
       focus: "Primary Focus",
-      focusTags: ["Industrial Design", "HMI Design", "UI/UX Design", "Visual Attention", "AI Workflow"],
-      tools: "Tools Stack"
+      focusTags: ["Industrial Design", "HMI Design", "UI/UX Design", "Visual Attention", "Prototype Implementation"],
+      tools: "Tools"
     },
     zh: {
       badge: "人物简历与学科背景",
-      title: "关于 HAYDEN",
-      tagline: "工业设计在读研究生 · 致力于机电工程系统与人因设计的深度交融。",
-      p1: "我是 Hayden，来自新加坡。我的学术路径横跨机电一体化工程（Mechatronics Engineering）与专业工业设计系统，使我能够同时从“底层技术逻辑”与“上层人本体验”构思产品与窗口层级。",
-      p2: "本科毕业于新加坡理工大学（SIT）机电专业，现正于中国海洋大学攻读工业设计硕士研究生。当前核心课题涵盖特种载具HMI设计优化、智能装备形态推敲、红外眼动追踪验证以及AI辅助全闭环代码工作流。",
-      p3: "我将设计视作解构模糊现实挑战的科学过程。通过搭建关系模型，将干涩的实证眼动物理指标翻译为富有感官弹性、高度易用的交互实物和图形设计决策。",
-      more: "探索更多关于我",
+      title: "关于谭德海",
+      tagline: "从机械电子工程到工业设计，探索技术系统与人的交互关系。",
+      p1: "我是谭德海，本科阶段学习机械电子工程，建立了对结构、控制、传感与系统实现的理解。后来我逐渐意识到，许多技术产品不仅需要被制造出来，也需要被人清楚地理解、稳定地操作，并在真实环境中形成良好的使用体验。",
+      p2: "因此，我在硕士阶段转向工业设计工程，研究方向集中在船舶 HMI、视觉注意力、人因工程与智能装备界面设计。我的关注点从“功能如何实现”进一步延伸到“人在复杂系统中如何感知信息、做出判断并完成操作”。",
+      p3: "在设计过程中，我会结合工程思维、用户任务分析、眼动实验、界面布局研究、UE5 / Python / Figma / Codex 等工具，将人因需求转化为具体的设计变量，并推动方案从研究分析走向原型与展示。",
+      more: "更多关于我",
       download: "下载设计简历",
       role: "工业设计专业研究生",
-      subTitle: "新加坡 · 工业设计 / HMI / UIUX",
-      regIndex: "中国海大 & 新加坡理工 索引",
-      profile: "受众画像说明",
+      subTitle: "工业设计 / HMI / UIUX",
+      regIndex: "教育背景索引",
+      profile: "个人信息",
       pName: "姓名",
       pIdent: "专业身份",
-      pNation: "国籍籍贯",
-      pNationVal: "新加坡籍",
-      edu: "学科教育路径",
-      edu1Title: "工学学士 / SIT本科",
-      edu1Desc: "机电一体化工程， 新加坡理工大学",
-      edu2Title: "工业设计硕士 / OUC研究生",
-      edu2Desc: "工业设计， 中国海洋大学",
-      focus: "核心能力聚焦",
-      focusTags: ["工业设计", "人机交互界面", "UI/UX交互", "人眼视觉注意力", "AI敏捷开发"],
-      tools: "专业工具载体"
+      edu: "学科教育背景",
+      edu1Title: "本科：工学学士",
+      edu1Desc: "机械电子工程，重庆工商大学",
+      edu2Title: "研究生：工学硕士",
+      edu2Desc: "工业设计工程，中国海洋大学",
+      focus: "研究与设计方向",
+      focusTags: ["工业设计", "HMI 设计", "UI/UX 设计", "视觉注意力", "原型实现"],
+      tools: "常用工具"
     }
   };
 
@@ -106,11 +102,13 @@ export default function AboutSection() {
               </a>
               
               <a
-                href="#contact"
+                href="/resume-hayden.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-secondary/25 hover:bg-secondary/40 border border-border/60 hover:border-white/20 text-white/90 hover:text-white text-xs md:text-sm font-mono uppercase tracking-widest px-6 py-3.5 rounded-lg transition-all font-semibold cursor-pointer"
               >
                 <FileText className="w-4 h-4 text-muted-foreground" />
-                <span>{t.download}</span>
+                <span>{language === "en" ? "Download Resume" : "下载简历"}</span>
               </a>
             </div>
           </div>
@@ -120,37 +118,15 @@ export default function AboutSection() {
             
             {/* Visual Profile Avatar Card */}
             <div className="relative w-full rounded-lg bg-secondary/15 hover:bg-secondary/25 border border-border/30 p-6 flex flex-col sm:flex-row items-center gap-6 overflow-hidden group transition-all duration-300">
-              {/* Abstract Portrait Square Placeholder */}
-              <div className="relative w-32 h-32 md:w-36 md:h-36 shrink-0 rounded-xl bg-black/60 border border-primary/20 group-hover:border-primary/40 flex items-center justify-center overflow-hidden transition-colors">
-                {/* Subtle blueprint grid in background of avatar */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:10px_10px]" />
-                
-                {/* Interactive premium abstract portrait svg */}
-                <svg width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute inset-0">
-                  {/* Subtle radiating waves or coordinates to represent sensory & mechatronics background */}
-                  <circle cx="50" cy="50" r="40" stroke="rgba(251, 146, 60, 0.08)" strokeDasharray="3 3" />
-                  <circle cx="50" cy="50" r="30" stroke="rgba(251, 146, 60, 0.12)" />
-                  <circle cx="50" cy="50" r="20" stroke="rgba(251, 146, 60, 0.2)" strokeDasharray="5 5" />
-                  
-                  {/* Vertical & Horizontal Crosshairs */}
-                  <line x1="50" y1="5" x2="50" y2="95" stroke="rgba(255, 255, 255, 0.03)" strokeWidth="1" />
-                  <line x1="5" y1="50" x2="95" y2="50" stroke="rgba(255, 255, 255, 0.03)" strokeWidth="1" />
-                  
-                  {/* Abstract Face Portrait Silhouette / Monogram 'H' */}
-                  <path d="M35 25V75" stroke="#FB923C" strokeWidth="3" strokeLinecap="round" opacity="0.8" />
-                  <path d="M65 25V75" stroke="#FB923C" strokeWidth="3" strokeLinecap="round" opacity="0.8" />
-                  <path d="M35 50H65" stroke="#FB923C" strokeWidth="3" strokeLinecap="round" opacity="0.8" />
-
-                  {/* Aesthetic pointer nodes */}
-                  <circle cx="35" cy="25" r="2.5" fill="#FB923C" />
-                  <circle cx="65" cy="75" r="2.5" fill="#FB923C" />
-                  <circle cx="50" cy="50" r="3" fill="#FB923C" className="animate-pulse" />
-                  <circle cx="50" cy="50" r="5" stroke="#FB923C" strokeWidth="0.5" opacity="0.5" />
-                  
-                  {/* Outer delicate coordinate numbers or design indicators */}
-                  <text x="50" y="15" fill="rgba(255, 255, 255, 0.3)" fontSize="5" fontFamily="monospace" textAnchor="middle">ID: 83C-System</text>
-                  <text x="50" y="88" fill="rgba(255, 255, 255, 0.3)" fontSize="5" fontFamily="monospace" textAnchor="middle">MECHATRONIC V1</text>
-                </svg>
+              {/* Profile photo */}
+              <div className="relative w-[6.4rem] h-[10.4rem] md:w-[7.2rem] md:h-[10.4rem] shrink-0 rounded-xl bg-black/60 border border-primary/20 group-hover:border-primary/40 flex items-center justify-center overflow-hidden transition-colors">
+                <img
+                  src="/self-photo.png"
+                  alt={language === "en" ? "Portrait of Hayden" : "谭德海头像"}
+                  className="h-full w-full object-cover object-[center_18%] scale-[1.03] grayscale-[18%] contrast-105 saturate-90 transition-transform duration-500 group-hover:scale-[1.07]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/35 pointer-events-none" />
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:10px_10px] opacity-45 mix-blend-overlay pointer-events-none" />
                 
                 {/* Active Indicator Pulse Ring */}
                 <span className="absolute top-2.5 right-2.5 flex h-2 w-2 animate-pulse">
@@ -164,7 +140,7 @@ export default function AboutSection() {
                 <div className="space-y-1">
                   <div className="flex items-center justify-center sm:justify-start gap-2">
                     <h3 className="text-2xl font-bold tracking-tight text-white uppercase font-sora">
-                      Hayden
+                      {language === "en" ? "Hayden" : "谭德海"}
                     </h3>
                     <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                   </div>
@@ -174,7 +150,9 @@ export default function AboutSection() {
                 </div>
                 <div className="space-y-1 text-xs text-muted-foreground font-mono leading-relaxed">
                   <div className="text-white/80">{t.subTitle}</div>
-                  <div className="text-[10px] text-muted-foreground/50 uppercase tracking-widest">{t.regIndex}</div>
+                  {language === "en" ? (
+                    <div className="text-[10px] text-muted-foreground/50 uppercase tracking-widest">{t.regIndex}</div>
+                  ) : null}
                 </div>
               </div>
 
@@ -194,15 +172,11 @@ export default function AboutSection() {
                 <div className="space-y-2 text-xs md:text-sm text-muted-foreground pl-6.5">
                   <div className="flex justify-between items-center py-0.5 border-b border-white/5">
                     <span>{t.pName}</span>
-                    <span className="text-white font-medium">Hayden</span>
+                    <span className="text-white font-medium">{language === "en" ? "Hayden" : "谭德海"}</span>
                   </div>
                   <div className="flex justify-between items-center py-0.5 border-b border-white/5">
                     <span>{t.pIdent}</span>
-                    <span className="text-white font-medium">{language === "en" ? "Graduate ID Scholar" : "工业设计硕士"}</span>
-                  </div>
-                  <div className="flex justify-between items-center py-0.5">
-                    <span>{t.pNation}</span>
-                    <span className="text-white font-medium">{t.pNationVal}</span>
+                    <span className="text-white font-medium">{language === "en" ? "Industrial Design Graduate Student" : "工业设计硕士研究生"}</span>
                   </div>
                 </div>
               </div>
@@ -258,8 +232,9 @@ export default function AboutSection() {
                     {[
                       "Figma",
                       "Rhino",
+                      "3D Max",
                       "Unreal Engine",
-                      "MATLAB",
+                      "Python",
                       "Adobe Illustrator",
                       "Codex"
                     ].map((tool, idx, arr) => (

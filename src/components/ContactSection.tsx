@@ -5,11 +5,12 @@ import { useLanguage } from "../context/LanguageContext";
 export default function ContactSection() {
   const { language } = useLanguage();
   const [copied, setCopied] = useState(false);
-  const emailAddress = "geminitdh@gmail.com";
+  const emailAddresses = ["geminitdh@gmail.com", "gemini_tdh@163.com"];
+  const primaryEmail = emailAddresses[0];
 
   const handleCopyEmail = async () => {
     try {
-      await navigator.clipboard.writeText(emailAddress);
+      await navigator.clipboard.writeText(emailAddresses.join("\n"));
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
@@ -19,15 +20,17 @@ export default function ContactSection() {
 
   const labels = {
     en: {
-      badge: "Get In Touch",
-      title: "Let’s build thoughtful products and interfaces.",
-      desc: "I am open to opportunities in industrial design, HMI, and UI/UX design, especially projects that connect research, systems thinking, and intelligent product experiences.",
+      badge: "Let’s Connect and Collaborate",
+      title: "I’m looking forward to bringing engineering thinking, human factors research, and interface design into real-world projects.",
+      desc: "My interests include industrial equipment, intelligent cockpit systems, maritime HMI, complex information interfaces, and AI-assisted prototyping. I’m open to internship opportunities, full-time roles, portfolio discussions, and interdisciplinary design collaborations.",
       contactMe: "Contact Me",
       downloadResume: "Download Resume",
-      registry: "Contact Registry",
+      registry: "Contact Information",
       emailLabel: "Contact Email",
-      geoLabel: "Geography",
-      scopeLabel: "Primary Scope",
+      geoLabel: "Resident Areas",
+      geoValue: "Qingdao / Zhaoqing",
+      scopeLabel: "Core Cooperation Scope",
+      scopeItems: ["Product Design", "HMI", "UI/UX"],
       copiedText: "Copied",
       copyText: "Copy",
       footerDesc: "Industrial Design · HMI · UI/UX · AI-assisted Workflow",
@@ -41,17 +44,19 @@ export default function ContactSection() {
       rights: "All rights reserved."
     },
     zh: {
-      badge: "随时联络并共同合作",
-      title: "并肩构建极富人因考究的智能硬件与交互界面。",
-      desc: "我热忱期待在工业装备、智能座舱/Maritime HMI和精细化UI/UX等领域的多元团队贡献力量。尤其对连接学理指标验证、系统化关系架构及深度AI赋能的高能研发任务充满期待。",
+      badge: "随时联系并共同合作",
+      title: "期待把工程背景、人因研究与界面设计能力带入真实项目中。",
+      desc: "我关注工业装备、智能座舱、Maritime HMI、复杂信息界面与 AI 辅助原型设计。无论是实习、全职岗位、作品集交流，还是跨学科设计合作，都欢迎联系我。",
       contactMe: "联络我本人",
       downloadResume: "获取简历 PDF",
-      registry: "联络注册信息登记",
+      registry: "联络信息",
       emailLabel: "项目合作邮箱",
       copiedText: "已复制",
       copyText: "一键复制",
-      geoLabel: "地理常驻区域",
-      scopeLabel: "核心交付范畴",
+      geoLabel: "常驻区域",
+      geoValue: "青岛 / 肇庆",
+      scopeLabel: "核心合作范畴",
+      scopeItems: ["产品设计", "HMI", "UI/UX"],
       footerDesc: "工业造型设计 · 人机界面系统 (HMI) · UI/UX交互设计 · AI智驱工作流",
       navItems: [
         { name: "精选项目", href: "#projects" },
@@ -96,7 +101,7 @@ export default function ContactSection() {
             {/* Interactive Actions */}
             <div className="flex flex-wrap gap-4 pt-2">
               <a
-                href={`mailto:${emailAddress}`}
+                href={`mailto:${primaryEmail}`}
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-primary-foreground text-xs md:text-sm font-mono uppercase tracking-widest px-6 py-3.5 rounded-lg transition-all font-semibold cursor-pointer group"
               >
                 <Send className="w-4 h-4 text-primary-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -104,11 +109,13 @@ export default function ContactSection() {
               </a>
               
               <a
-                href="#contact"
+                href="/resume-hayden.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-secondary/15 hover:bg-secondary/35 border border-border/60 hover:border-white/20 text-white text-xs md:text-sm font-mono uppercase tracking-widest px-6 py-3.5 rounded-lg transition-all font-semibold cursor-pointer text-center"
               >
                 <Download className="w-4 h-4 text-muted-foreground" />
-                <span>{t.downloadResume}</span>
+                <span>{language === "en" ? "Download Resume" : "下载简历"}</span>
               </a>
             </div>
           </div>
@@ -133,7 +140,11 @@ export default function ContactSection() {
                     <span>{t.emailLabel}</span>
                   </div>
                   <div className="flex items-center justify-between gap-3 bg-black/30 border border-border/15 rounded-lg px-4 py-2.5 font-mono text-xs sm:text-sm group">
-                    <span className="text-white select-all break-all">{emailAddress}</span>
+                    <span className="text-white select-all break-all leading-relaxed">
+                      {emailAddresses.map((email) => (
+                        <span key={email} className="block">{email}</span>
+                      ))}
+                    </span>
                     <button
                       type="button"
                       onClick={handleCopyEmail}
@@ -160,7 +171,7 @@ export default function ContactSection() {
                   <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                   <div className="space-y-0.5">
                     <div className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider">{t.geoLabel}</div>
-                    <div className="text-white text-xs sm:text-sm font-semibold">Singapore / China (新加坡 / 中国)</div>
+                    <div className="text-white text-xs sm:text-sm font-semibold">{t.geoValue}</div>
                   </div>
                 </div>
 
@@ -170,11 +181,14 @@ export default function ContactSection() {
                   <div className="space-y-0.5">
                     <div className="text-[10px] font-mono text-muted-foreground/60 uppercase tracking-wider">{t.scopeLabel}</div>
                     <div className="text-white text-xs sm:text-sm font-semibold flex flex-wrap gap-x-2">
-                      <span>Industrial Design</span>
-                      <span className="text-primary/40">&middot;</span>
-                      <span>HMI</span>
-                      <span className="text-primary/40">&middot;</span>
-                      <span>UI/UX</span>
+                      {t.scopeItems.map((item, index) => (
+                        <React.Fragment key={item}>
+                          <span>{item}</span>
+                          {index < t.scopeItems.length - 1 && (
+                            <span className="text-primary/40">&middot;</span>
+                          )}
+                        </React.Fragment>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -229,7 +243,7 @@ export default function ContactSection() {
             <div className="flex gap-4">
               <span className="hover:text-white transition-colors cursor-default">PORTFOLIO V1.0</span>
               <span>&middot;</span>
-              <span className="hover:text-white transition-colors cursor-default">SINGAPORE</span>
+              <span className="hover:text-white transition-colors cursor-default">QINGDAO / ZHAOQING</span>
             </div>
           </div>
         </div>
