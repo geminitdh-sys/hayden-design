@@ -1,5 +1,12 @@
 export function assetUrl(path: string) {
-  return `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+  if (/^(https?:|data:|blob:)/.test(path)) {
+    return path;
+  }
+
+  const cleanPath = path.replace(/^\/+/, '');
+  const baseUrl = normalizeBaseUrl(import.meta.env.BASE_URL);
+
+  return `${baseUrl}${cleanPath}`;
 }
 
 export function routerBasename() {
@@ -9,5 +16,15 @@ export function routerBasename() {
     return undefined;
   }
 
-  return baseUrl.replace(/\/$/, '');
+  const cleanBaseUrl = baseUrl.replace(/^\/+|\/+$/g, '');
+
+  return cleanBaseUrl ? `/${cleanBaseUrl}` : undefined;
+}
+
+function normalizeBaseUrl(baseUrl: string) {
+  if (!baseUrl || baseUrl === './') {
+    return '/';
+  }
+
+  return baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`;
 }
